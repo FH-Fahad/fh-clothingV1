@@ -28,6 +28,7 @@ class App extends React.Component {
         userRef.onSnapshot((snapshot) => {
           setCurrentUser({
             id: snapshot.id,
+            photoURL: userAuth.photoURL,
             ...snapshot.data(),
           });
         });
