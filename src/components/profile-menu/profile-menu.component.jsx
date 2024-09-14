@@ -44,11 +44,11 @@ const ProfileMenu = ({ currentUser }) => {
         )}
       </div>
       {dropdownVisible && (
-          <div className="profile-dropdown">
-            <div className="option" onClick={() => auth.signOut()}>
-              SIGN OUT
-            </div>
+        <div className="profile-dropdown">
+          <div className="option" onClick={async () => await auth.signOut()}>
+            SIGN OUT
           </div>
+        </div>
       )}
     </div>
   );
